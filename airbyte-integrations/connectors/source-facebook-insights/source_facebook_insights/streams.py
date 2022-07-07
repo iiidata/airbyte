@@ -39,7 +39,7 @@ class FacebookInsightsStream(HttpStream, ABC):
 
         return {
             "limit": 100,
-            "after": data.get("paging", {}).get("cursors", {}).get("after"),
+            "after": data.get("paging", {}).get("next", {}),
         }
 
     def request_params(
@@ -61,7 +61,12 @@ class FacebookInsightsStream(HttpStream, ABC):
 
         for record in records:
             yield record
+        # paging = records.get('paging')
+        # if paging and paging.get('next'):
+        #     results_next = self._perform_request(paging.get('next'),request_headers, request_payload)
+        #     results += results_next
 
+        # return results
 
 class Page(FacebookInsightsStream):
     """
@@ -140,7 +145,7 @@ class PostInsights(FacebookInsightsStream):
     ) -> MutableMapping[str, Any]:
         params = super().request_params(stream_state, stream_slice, next_page_token)
         params["fields"] = f'insights.metric({",".join(POST_METRICS)})'
-
+        #  params["fields"] = ",".join(PAGE_METRICS)
         return params
 
     def parse_response(self, response: requests.Response, **kwargs) -> Iterable[Mapping]:
