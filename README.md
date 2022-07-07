@@ -68,3 +68,9 @@ Check out our [roadmap](docs/project-overview/roadmap.md) to get informed on wha
 
 See the [LICENSE](docs/project-overview/licenses/) file for licensing information, and our [FAQ](docs/project-overview/licenses/license-faq.md) for any questions you may have on that topic. 
 
+
+# IIIData information
+
+## Documentation
+
+J'ai suivis cette [documentation](https://docs.airbyte.com/connector-development/tutorials/building-a-python-source/#step-11-add-the-connector-to-the-api-ui)
