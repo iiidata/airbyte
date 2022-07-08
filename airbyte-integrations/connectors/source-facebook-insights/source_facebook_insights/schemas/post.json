@@ -1,0 +1,238 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": [
+		"null",
+		"object"
+	],
+	"properties": {
+		"message": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"story": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"created_time": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"shares": {
+			"type": [
+				"null",
+				"object"
+			],
+			"properties": {
+				"count": {
+					"type": [
+						"null",
+						"integer"
+					]
+				}
+			}
+		},
+		"permalink_url": {
+			"type": [
+				"null",
+				"string"
+			]
+		},
+		"attachments": {
+			"type": [
+				"null",
+				"object"
+			],
+			"properties": {
+				"data": {
+					"type": [
+						"null",
+						"array"
+					],
+					"items": {
+						"type": [
+							"null",
+							"object"
+						],
+						"properties": {
+							"media": {
+								"type": [
+									"null",
+									"object"
+								],
+								"properties": {
+									"image": {
+										"type": [
+											"null",
+											"object"
+										],
+										"properties": {
+											"height": {
+												"type": [
+													"null",
+													"integer"
+												]
+											},
+											"src": {
+												"type": [
+													"null",
+													"string"
+												]
+											},
+											"width": {
+												"type": [
+													"null",
+													"integer"
+												]
+											}
+										}
+									}
+								}
+							},
+							"subattachments": {
+								"type": [
+									"null",
+									"object"
+								],
+								"properties": {
+									"data": {
+										"type": [
+											"null",
+											"array"
+										],
+										"items": {
+											"type": [
+												"null",
+												"object"
+											],
+											"properties": {
+												"media": {
+													"type": [
+														"null",
+														"object"
+													],
+													"properties": {
+														"image": {
+															"type": [
+																"null",
+																"object"
+															],
+															"properties": {
+																"height": {
+																	"type": [
+																		"null",
+																		"integer"
+																	]
+																},
+																"src": {
+																	"type": [
+																		"null",
+																		"string"
+																	]
+																},
+																"width": {
+																	"type": [
+																		"null",
+																		"integer"
+																	]
+																}
+															}
+														}
+													}
+												},
+												"target": {
+													"type": [
+														"null",
+														"object"
+													],
+													"properties": {
+														"id": {
+															"type": [
+																"null",
+																"string"
+															]
+														},
+														"url": {
+															"type": [
+																"null",
+																"string"
+															]
+														}
+													}
+												},
+												"type": {
+													"type": [
+														"null",
+														"string"
+													],
+													"enum": [
+														"photo"
+													]
+												},
+												"url": {
+													"type": [
+														"null",
+														"string"
+													]
+												}
+											}
+										}
+									}
+								}
+							},
+							"target": {
+								"type": [
+									"null",
+									"object"
+								],
+								"properties": {
+									"id": {
+										"type": [
+											"null",
+											"string"
+										]
+									},
+									"url": {
+										"type": [
+											"null",
+											"string"
+										]
+									}
+								}
+							},
+							"title": {
+								"type": [
+									"null",
+									"string"
+								]
+							},
+							"type": {
+								"type": [
+									"null",
+									"string"
+								]
+							},
+							"url": {
+								"type": [
+									"null",
+									"string"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"id": {
+			"type": [
+				"null",
+				"string"
+			]
+		}
+	}
+}

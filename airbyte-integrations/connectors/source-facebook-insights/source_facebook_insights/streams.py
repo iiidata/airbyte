@@ -12,7 +12,7 @@ from source_facebook_insights.metrics import PAGE_FIELDS, PAGE_METRICS, POST_FIE
 
 
 class FacebookInsightsStream(HttpStream, ABC):
-    url_base = "https://graph.facebook.com/v12.0/"
+    url_base = "https://graph.facebook.com/v14.0/"
     primary_key = "id"
     data_field = "data"
     transformer = TypeTransformer(TransformConfig.DefaultSchemaNormalization)
@@ -39,7 +39,7 @@ class FacebookInsightsStream(HttpStream, ABC):
 
         return {
             "limit": 100,
-            "after": data.get("paging", {}).get("next", {}),
+            "after": data.get("paging", {}).get("cursors", {}).get("after"),
         }
 
     def request_params(

@@ -49,8 +49,8 @@ class SourceFacebookInsights(AbstractSource):
         }
 
         streams = [
-            # Post(**stream_kwargs),
-            # Page(**stream_kwargs),
+            Post(**stream_kwargs),
+            Page(**stream_kwargs),
             PostInsights(**stream_kwargs),
             PageInsights(**stream_kwargs),
         ]

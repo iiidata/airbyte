@@ -41,6 +41,12 @@ POST_METRICS = [
 
 PAGE_FIELDS = ",".join(
     [
+        "id", "about", "ad_campaign", "affiliation", "app_id", "artists_we_like", "attire", "awards", "band_interests",
+        "band_members", "bio", "birthday", "booking_agent", "built", "can_checkin", "can_post", "category", "company_overview",
+        "country_page_likes", "cover", "current_location", "description", "display_subtext", "displayed_message_response_time",
+        "emails", "fan_count", "featured_video", "followers_count", "general_info", "general_manager", "global_brand_page_name", "impressum", "instagram_business_account", "link",
+        "location", "members", "mission", "name", "name_with_location_descriptor", "new_like_count", "phone", "rating_count", "single_line_address", "talking_about_count",
+        "username", "website", "were_here_count"
     ]
 )
 
