@@ -1,0 +1,83 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": ["null","object"],
+    "properties": {
+        "paging": {
+            "type": ["null","object"],
+            "properties": {
+                "start": {
+                    "type": ["null","integer"]
+                },
+                "count": {
+                    "type": ["null","integer"]
+                },
+                "links": {
+                    "type": ["null","array"],
+                    "items": [{
+                        "type": ["null","object"],
+                            "properties": {
+                                "type": {
+                                    "type": ["null","string"]
+                                },
+                                "rel": {
+                                    "type": ["null","string"]
+                                },
+                                "href": {
+                                    "type": ["null","string"]
+                                }
+                            }
+                        }
+                    ]
+                },
+                "total": {
+                    "type": ["null","integer"]
+                }
+            }
+        },
+        "elements": {
+            "type": ["null","array"],
+            "items": [{
+                "type": ["null","object"],
+                    "properties": {
+                        "specificContent": {
+                            "type": ["null","object"],
+                            "properties": {
+                                "com.linkedin.ugc.ShareContent": {
+                                    "type": ["null","object"],
+                                    "properties": {
+                                        "shareCommentary": {
+                                            "type": ["null","object"],
+                                            "properties": {
+                                                "text": {
+                                                    "type": ["null","string"]
+                                                }
+                                            }
+                                        },
+                                        "shareFeatures": {
+                                            "type": ["null","object"],
+                                            "properties": {
+                                                "hashtags": {
+                                                    "type": ["null","array"],
+                                                    "items": [{
+                                                        "type": ["null","string"]
+                                                        }
+                                                    ]
+                                                }
+                                            }
+                                        },
+                                        "shareMediaCategory": {
+                                            "type": ["null","string"]
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "id": {
+                            "type": ["null","string"]
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
