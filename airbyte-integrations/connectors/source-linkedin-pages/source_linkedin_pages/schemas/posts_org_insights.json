@@ -1,0 +1,47 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+        "results": {
+            "type": "object",
+            "properties": {
+                "urn:li:share:6971113089052065793": {
+                    "type": "object",
+                    "properties": {
+                        "likesSummary": {
+                            "type": "object",
+                            "properties": {
+                                "likedByCurrentUser": {
+                                    "type": "boolean"
+                                },
+                                "totalLikes": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "commentsSummary": {
+                            "type": "object",
+                            "properties": {
+                                "totalFirstLevelComments": {
+                                    "type": "integer"
+                                },
+                                "aggregatedTotalComments": {
+                                    "type": "integer"
+                                }
+                            }
+                        },
+                        "target": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "statuses": {
+            "type": "object"
+        },
+        "errors": {
+            "type": "object"
+        }
+    }
+}
