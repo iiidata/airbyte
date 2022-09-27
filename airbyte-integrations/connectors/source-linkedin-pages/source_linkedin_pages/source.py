@@ -7,6 +7,8 @@ from abc import ABC
 from typing import Any, Iterable, List, Mapping, MutableMapping, Optional, Tuple
 
 import requests
+import time
+
 from airbyte_cdk import AirbyteLogger
 from airbyte_cdk.models import SyncMode
 from airbyte_cdk.sources import AbstractSource
@@ -82,8 +84,9 @@ class FollowerStatistics(LinkedinPagesHttpStream):
 
 class ShareStatistics(LinkedinPagesHttpStream):
     def path(self, stream_state: Mapping[str, Any], **kwargs) -> MutableMapping[str, Any]:
-
-        path = f"organizationalEntityShareStatistics?q=organizationalEntity&organizationalEntity=urn%3Ali%3Aorganization%3A{self.org}"
+#organizationalEntityShareStatistics?q=organizationalEntity&organizationalEntity=urn:li:organization:2414183&timeIntervals.timeGranularityType=DAY&timeIntervals.timeRange.start=1551398400000&timeIntervals.timeRange.end=1552003200000
+        ts = time.time()
+        path = f"organizationalEntityShareStatistics?q=organizationalEntity&organizationalEntity=urn%3Ali%3Aorganization%3A{self.org}&timeIntervals.timeGranularityType=DAY&timeIntervals.timeRange.start={ts * 1000}&timeIntervals.timeRange.end={(ts + 86400)*1000}"
         return path
 
     def parse_response(
@@ -175,10 +178,10 @@ class PostsOrgInsights(LinkedinPagesStream,HttpSubStream):
         """
         return {"X-RestLi-Protocol-Version": "2.0.0"}
 
-    def parse_response(
-        self, response: requests.Response, stream_state: Mapping[str, Any] = None, stream_slice: Mapping[str, Any] = None
-    ) -> Iterable[Mapping]:
-        yield from response.json().get("results").values()
+    # def parse_response(
+    #     self, response: requests.Response, stream_state: Mapping[str, Any] = None, stream_slice: Mapping[str, Any] = None
+    # ) -> Iterable[Mapping]:
+    #     yield from response.json().get("results").values()
         
         
         
